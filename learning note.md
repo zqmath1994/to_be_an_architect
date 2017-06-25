@@ -55,7 +55,7 @@
     * From Survivor  
     * To Survivor     
 Eden：From Survivor：To Survivor = 8:1:1,新生代发生Minor GC,是发生在新生代中的垃圾收集动作，所采用的是复制算法。
- *  老年代    
+ *  老年代</br>
  老年代存放了大对象(--XX:PretenureSzieThreshold参数设置)以及长期存活的对象(在年轻代中经历了N次垃圾回收后仍然存活的对象，就会被放到年老代中)
  老年代发生FullGC ，所采用的是标记-清除算法  
  
