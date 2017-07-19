@@ -131,4 +131,18 @@ rx是*regexp.Regexp类型的变量，s是用以匹配的字符串，b是用以�
 * rx.findAll(b) 返回所有非重叠匹配的[][]byte类型的切片或者nil
 * ....下次接着总结
 
+#sort包
+* sort.Float64s(fs) 将[]float64按升序排序
+* sort.Float64AreSorted(fs) 如果[]float64是有序的则返回True
+* sort.Ints(is) 将[]int按升序排序
+* sort.IntAreSorted(is) 如果[]int是有序的则返回true
+* sort.IsSorted(d) 如果sort.Interface的值d是有序的，则返回True
+* sort.Search(size,fn) 在一个排序好的数组中根据函数签名为func(int) bool的函数fn进行搜索，返回第一个使得函数fn返回值为true的索引
+* sort.SearchFloat64s(fs,f) 返回有序[]float64切片fs中类型为float64的值f的索引值
+* sort.SearchInts(is,i) 返回有序[]int切片is中类型为int的值i的索引
+* sort.SearchStrings[ss,s] 返回有序[]string切片ss中类型为string的值s的索引
+* sort.Sort(d) 排序类型为sort.Interface的切片
+* sort.Strings(ss) 按升序排序[]string类型的切片ss
+* sort.StringAreSorted(ss) 如果[]string类型的切片ss是有序的，返回true
+
 
