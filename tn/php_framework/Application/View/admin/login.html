@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登录</title>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="/css/admin/login.css">
+	<style>
+		.hide {
+			display:none
+		}
+	</style>
+</head>
+<body>
+	<!--log-->
+
+	<!-- 登陆框 -->
+	<div>
+		<input class="register-btn" type="button" value="注册" />
+	</div>
+	<form class="login" method="post" action="/admin/admin/login">
+		<div><span>用户名</span><input type="text" name="username" placeholder="请输入邮箱"/></div>
+		<div><span>密&nbsp;&nbsp;码</span><input type="password" name="password" placeholder="请输入密码"/></div>
+		<div><input type="submit" value="提交"></div>
+	</form>
+	<form class="register hide" method="post" action="/admin/admin/register">
+		<div><span>昵&nbsp;&nbsp;称</span><input type="text" name="nickname" placeholder="请输入昵称"></div>
+		<div><span>用户名</span><input type="text" name="username" placeholder="请输入邮箱"/></div>
+		<div><span>密&nbsp;&nbsp;码</span><input type="password" name="password" placeholder="请输入密码"/></div>
+		<div><input id="login" type="submit" value="提交"></div>
+	</form>
+</body>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$(".register-btn").click(function (){
+			$(".login").addClass("hide");
+			$(".register").removeClass("hide");
+			$(".retister-btn").addClass("hide");
+		});
+	});
+</script>
+</html>

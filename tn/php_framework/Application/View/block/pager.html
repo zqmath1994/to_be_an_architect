@@ -1,0 +1,29 @@
+<?php if($pager->totalPages > 1): ?>
+<div>
+    <ul>
+        <?php if($pager->curr == $pager->first): ?>
+        <?php else: ?>
+        <li><a href="<?php echo $pager->url . $pager->first; ?>">首页</a></li>
+        <li><a href="<?php echo $pager->url . $pager->prev; ?>">上一页</a></li>
+        <?php endif; ?>
+        <?php for($page = $pager->first; $page <= $pager->last; $page++): ?>
+        <?php if($page == $pager->curr): ?>
+        <li><span><?php echo $page; ?></span></li>
+        <?php else: ?>
+        <li><a href="<?php echo $pager->url . $page; ?>"><?php echo $page; ?></a></li>
+        <?php endif; ?>
+        <?php endfor; ?>
+        <?php if(($pager->curr+4) < $pager->last): ?>
+        <?php if($pager->last >= 10): ?>
+        <li><span>...</span></li>
+        <li><a href="<?php echo $pager->url . $pager->last; ?>"><?php echo $pager->last; ?></a></li>
+        <?php endif; ?>
+        <?php endif; ?>
+        <?php if($pager->curr == $pager->last): ?>
+        <?php else: ?>
+        <li><a href="<?php echo $pager->url . $pager->next; ?>">下一页</a></li>
+        <li><a href="<?php echo $pager->url . $pager->last; ?>">尾页</a></li>
+        <?php endif; ?>
+    </ul>
+</div>
+<?php endif; ?>
