@@ -1,0 +1,60 @@
+第二次上传学习总结 7.12-7.19
+1.Struts2+spring4+hibernate5项目实例(初次接触,实现简单的新闻发布系统)
+    使用配置文件方式
+  一.需求分析
+    未登录用户:1.浏览新闻主题
+              2.查看对应主题下的新闻标题列表
+              3.点击新闻标题浏览内容
+    管理员功能:1.添加主题,删除主题,修改主题
+              2.添加新闻,删除新闻,查询新闻
+              3.更改新闻对应的主题
+              4.登录/登出
+  二.设计数据库/表
+    1.主题表topic
+    2.新闻信息表newsinfo
+    3.管理员信息表admin
+    4.设置newsinfo对topic的外键
+  三.事务管理
+    在spring-config.xml下声明事务管理,事务通知,切面
+  四.对应实体类和.hbm.xml的映射文件
+    1.在页面分页显示,实现一个Pager类
+          curPage//待显示页面
+          perPageRows//每页显示记录数
+          rowCount//总记录数
+          pageCount//总页数
+  五.实现dao层/dao.impl层和biz/biz.impl层
+     AdminDAO
+     NewsinfoDAO
+     TopicDAO
+  六.实现action和对应的Struts.xml下对应的action
+  
+2.总结了部分错误(之前一部分忘记记录了)
+  1).Error creating bean with name 'dataSource' 
+     defined in class path resource [resource/applicationContext.xml]:
+     解决:需要配置spring-aspects-3.2.3.RELEASE.jar、aspectjweaver.jar、aspectjrt.jar
+  2).Error creating bean with name 'sessionFactory' 
+     defined in class path resource [spring-config.xml]: 
+     解决:<bean id="dataSource"下的username,password,url没有配置正确
+  3).MappingException: Could not get constructor for org.hibernate.persister.entity.SingleTableEntityPersister
+     解决:数据表对应的实体类存在类型对应不正确
+     
+3.做了一些leetCode上的tree分类下的e/m的算法题
+    (二叉)树的层次遍历
+    //用一个队列存放树的节点
+    //将根节点root放入队列中,并申明一个临时指针
+    //当存放节点的队列不为空时,获取当前队列中的节点数量
+    //每次从队列中取出队首节点,判断左右子节点是否为空,不为空则放入队列中
+      queue< TreeNode* > que;
+			que.push(root); 
+			TreeNode* temp;//
+			while(!que.empty()){
+				int n = que.size();
+				for(int i=0;i<n;i++){
+					temp = que.front();
+					que.pop();
+          
+					if(temp->left!=NULL) que.push(temp->left);
+					if(temp->right!=NULL) que.push(temp->right);
+				}
+以上为本周总结;
+打算下一周学习mybatis和maven,改变项目直接引入jar包的方式.    
