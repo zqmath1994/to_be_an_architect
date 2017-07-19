@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="/css/index.css" type="text/css" />
+</head>
+<body>
+<form action="send" method="post" class="STYLE-NAME">
+    <h1>Contact Form
+        <span>Please fill all the texts in the fields.</span>
+    </h1>
+    <label>
+        <span>标题</span>
+        <input id="name" type="text" name="title" placeholder="" />
+    </label>
+    <label>
+        <span>内容</span>
+        <textarea id="message" name="message" placeholder="Your Message to Us"></textarea>
+    </label>
+    <label>
+        <span>&nbsp;</span>
+        <input type="button" class="button" value="提交" />
+    </label>
+</form>
+<?php foreach($data as $val): ?>
+<li><?php echo $val; ?></li>
+<?php endforeach; ?>
+</body>
+</html>
