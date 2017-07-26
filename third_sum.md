@@ -1,7 +1,7 @@
 第三次学习总结 7.20-7.26
 一.maven
   maven 是一个项目管理工具,负责管理项目开发过程.
-  ***好处:不用再去到处找jar包,不同版本jar包之间产生冲突的可能减小
+  好处:不用再去到处找jar包,不同版本jar包之间产生冲突的可能减小
   1.maven工程结构
   
   pom.xml(依赖关系的配置文件)
@@ -42,12 +42,14 @@
   mybatis是一个ORM框架,持久层框架,
   只使用XML和注解来配置和映射基本数据类型、Map接口和POJO到数据库记录.
   相对Hibernate的"全自动",Mybatis 是一种“半自动化”的ORM实现,需要自己写SQL.
+  
   1.mybatis结构
     mybatis-config.xml(相当于hibernate的config.xml)
       配置内容：(数据源)dataSource、(事务)transaction、properties、(别名)typeAliases、(全局设置)settings、mapper配置.
     SqlSessionFactory--会话工厂，作用是创建SqlSession,开发中以单例模式管理 SqlSessionFactory.
     SqlSession--会话，是一个面向用户程序员的接口，使用mapper代理方法开发时不需要程序员直接调用sqlSession的方法.
     SqlSession线程不安全，适用在方法体内
+  
   2.mybatis开发DAO的方法:
     mapper代理方法,只要写mapper接口(相当于dao接口),mybatis自动根据mapper接口和mapper接口对应的statement自动生成代理对象（接口实现类对象）。
 	 1）xxxMapper.xml中namespace是mapper接口的全限定名
