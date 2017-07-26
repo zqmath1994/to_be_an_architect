@@ -56,8 +56,10 @@
 	 2）xxxMapper.xml中statement的id为mapper接口方法名(select insert delete update对应的方法)
 	 3）xxxMapper.xml中statement的输入映射类型(parameterType)和mapper接口方法输入参数类型一致,例如基本数据类型,pojo
 	 4) xxxMapper.xml中statement的输出映射类型(resultType)和mapper接口方法返回结果类型一致
+  
   3.和spring结合
     config.xml下的数据源,别名,mapper配置交给spring管理,在ApplicationContext.xml中进行配置
+    
     需要引入依赖
     <!--mybatis-spring适配器-->
     <dependency>
@@ -65,7 +67,8 @@
       <artifactId>mybatis-spring</artifactId>
       <version>1.3.1</version>
     </dependency>
-  4.附上网上一个mybatis结合spring示例
+  
+  4.附上网上一个mybatis结合spring示例
   	<a href="http://www.cnblogs.com/best/p/5661934.html"/>	
 	
 下一周计划:学习redis和练习算法题
