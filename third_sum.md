@@ -62,5 +62,8 @@
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis-spring</artifactId>
       <version>1.3.1</version>
-    </dependency>
-
+    </dependency>
+  4.附上网上一个mybatis结合spring示例
+  	<a href="http://www.cnblogs.com/best/p/5661934.html"/>	
+	
+下一周计划:学习redis和练习算法题
